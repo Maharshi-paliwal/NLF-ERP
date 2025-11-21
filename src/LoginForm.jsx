@@ -13,11 +13,10 @@ const LoginForm = ({ onLoginSuccess }) => {
   const validUsers = [
     { email: "admin@erp.com", password: "admin123", role: "Admin" },
     { email: "sales@erp.com", password: "sales123", role: "Sales" },
-    { email: "finance@erp.com", password: "finance123", role: "Finance" },
+    { email: "Site@erp.com", password: "Site123", role: "Finance" },
     { email: "hr@erp.com", password: "hr123", role: "HR" },
-    { email: "design@erp.com", password: "design123", role: "Design" },
-    { email: "store@erp.com", password: "store123", role: "Store" },
-    { email: "planning@erp.com", password: "planning123", role: "Planning" },
+    { email: "Staff@erp.com", password: "Staff123", role: "Design" },
+    
   ];
 
   const handleLogin = async (e) => {
@@ -69,8 +68,9 @@ const LoginForm = ({ onLoginSuccess }) => {
       <Container className="d-flex justify-content-center align-items-center vh-100">
         <Card className="login-card shadow-lg" style={{ width: "400px" }}>
           <Card.Body className="p-5">
-            <div className="text-center mb-4">
-              <h2 className="fw-bold mb-2">ERP System</h2>
+            <div className="text-center mb-4 mt-5">
+              <img src="/NLF.gif" width="300px" className="p-3"/>
+              <h5 className="fw-bold mb-2">ERP System</h5>
               <p className="text-muted">Please login to continue</p>
             </div>
 
@@ -121,23 +121,22 @@ const LoginForm = ({ onLoginSuccess }) => {
                   onChange={(e) => setRole(e.target.value)}
                   disabled={loading}
                   required
+                  className="border-none"
                 >
                   <option value="">-- Choose a role --</option>
                   <option value="Admin">Admin</option>
                   <option value="Sales">Sales</option>
-                  <option value="Finance">Finance</option>
+                  <option value="Finance">Site</option>
                   <option value="HR">HR</option>
-                  <option value="Design">Design</option>
-                  <option value="Store">Store</option>
-                  <option value="Planning">Planning</option>
+                  <option value="Design">Staff</option>
                 </Form.Select>
               </Form.Group>
 
               {/* Login Button */}
               <Button
-                variant="primary"
+                className="add-customer-btn w-100 py-2 "
                 type="submit"
-                className="w-100 py-2 fw-bold"
+                
                 disabled={loading}
               >
                 {loading ? "Logging in..." : "Login"}
@@ -146,7 +145,7 @@ const LoginForm = ({ onLoginSuccess }) => {
 
             {/* Test Credentials Info */}
             <div className="mt-4 p-3 bg-light rounded">
-              <h6 className="fw-bold mb-3">📋 Test Credentials:</h6>
+              <h6 className="fw-bold mb-3 text-center">Trial Credentials:</h6>
               <small className="d-block mb-2">
                 <strong>Email:</strong> admin@erp.com | <strong>Password:</strong> admin123
               </small>
@@ -154,13 +153,13 @@ const LoginForm = ({ onLoginSuccess }) => {
                 <strong>Email:</strong> sales@erp.com | <strong>Password:</strong> sales123
               </small>
               <small className="d-block mb-2">
-                <strong>Email:</strong> finance@erp.com | <strong>Password:</strong> finance123
+                <strong>Email:</strong> Site@erp.com | <strong>Password:</strong> Site123
               </small>
               <small className="d-block mb-2">
                 <strong>Email:</strong> hr@erp.com | <strong>Password:</strong> hr123
               </small>
               <small className="d-block">
-                <strong>Email:</strong> design@erp.com | <strong>Password:</strong> design123
+                <strong>Email:</strong> staff@erp.com | <strong>Password:</strong> Staff123
               </small>
             </div>
           </Card.Body>
