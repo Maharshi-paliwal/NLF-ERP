@@ -1,0 +1,374 @@
+.form-control:focus {
+  border-color: black;
+  /* light blue border */
+  outline: 0;
+  box-shadow: 0 0 0 0px gray
+}
+
+.heading {
+  margin-bottom: 3rem;
+
+
+}
+
+.buttonEye {
+  background: #0d63fd;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+
+}
+
+
+
+.eyeButton {
+  width: 25px
+}
+
+/* ===== Customer Table ===== */
+
+
+.table-actions {
+  display: flex;
+  gap: 6px;
+
+}
+
+/* Icon buttons (View/Edit) */
+
+.table-actions .icon-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+
+.table-actions .icon-btn img {
+  width: 30px
+}
+
+.add-customer-btn {
+  background: linear-gradient(to right, #ed3131, #f78a8a);
+  border: none;
+}
+
+.table-actions .edit-btn {
+  background-color: #bdf2ff;
+  /* light cyan */
+  color: #111;
+
+}
+
+/* Action buttons */
+.table-actions .btn-po {
+  background: linear-gradient(rgb(76, 175, 80), rgb(46, 125, 50));
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  font-weight: 600;
+  width: 140px
+}
+
+.table-actions .btn-quotation {
+  background-color: #222;
+  /* Black for Create Quotation */
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  font-weight: 600;
+  width: 140px
+}
+
+.table-actions .btn-po:hover {
+  background-color: #c62828;
+}
+
+.table-actions .btn-quotation:hover {
+  background-color: #000;
+}
+
+/* ===== Responsive Tables ===== */
+
+
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+
+  .table tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .table tbody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 10px;
+    border: none !important;
+  }
+
+  .table tbody td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #555;
+  }
+}
+
+/*..................................................... pagination css.............................................................................. */
+
+.pagination .page-link {
+  color: black;
+  /* Default text color */
+  border: none;
+  /* Cleaner look */
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination .page-link:hover {
+  color: red;
+  /* Hover color */
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: red;
+  /* Active page background */
+  border-color: red;
+  color: white !important;
+  /* White text when active */
+  font-weight: bold;
+}
+
+/*..................................................... status dropdown css.............................................................................. */
+
+.status-select {
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+
+/* Status dropdown styles */
+.status-select {
+  font-weight: 600;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  min-width: 120px;
+  text-transform: capitalize;
+}
+
+/* Individual status colors */
+
+.pending-approval-btn {
+  width: 140px;
+  border-radius: 5px;
+  border: 1px solid #C62828;
+  /* border color from gradient */
+  color: #C62828;
+  font-weight: 300;
+
+  background-image: linear-gradient(to right, #ffe6f0, #ffd9e6);
+
+  /* Optional box shadow */
+}
+
+
+/* Force sidebar icons to render as solid white */
+/* .sidebar img,
+.sidebar .nav-link img,
+.nav-link.icons img,
+.sidebar-container .nav-link img {
+  -webkit-filter: brightness(0) invert(1) !important;
+  filter: brightness(0) invert(1) !important;
+  opacity: 1 !important;
+} */
+
+.custom-searchbar-input {
+  /* ... existing styles ... */
+  width: 100%;
+  /* Default to full width on small screens */
+  max-width: 300px;
+  /* Cap its width on large screens */
+}
+
+/* Adjustments for medium screens */
+@media (min-width: 768px) {
+  .custom-searchbar-input {
+    max-width: 300px;
+    /* Use a percentage for mid-sized screens */
+  }
+}
+
+/* Adjustments for large screens */
+@media (min-width: 992px) {
+  .custom-searchbar-input {
+    width: 20vw;
+    /* Your desired width on larger screens */
+  }
+}
+
+/* Action Button Sizes */
+.btn-action {
+  width: 100%;
+  /* Default to full width on small screens */
+  max-width: 120px;
+  /* Cap its width on larger screens */
+  /* ... rest of the styles ... */
+}
+
+/* Adjust for medium screens */
+/* Normal nav-links */
+.sidebar .nav-link {
+  display: block;
+  width: 100%;
+  color: var(--black);
+  padding: 10px;
+  border-radius: 0.5rem;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+/* Hover */
+.sidebar .nav-link:hover {
+ 
+  color: #C62828;
+  border: 1px #C62828;
+}
+
+/* Active state */
+.sidebar .nav-link.active {
+  background-image: linear-gradient(to right, #ed3131, #ed2525);
+  color: white;
+  border: 1px #C62828;
+}
+
+/* Change icon color to white when nav-link is active */
+.sidebar .nav-link.active img {
+  filter: brightness(0) invert(1) !important;
+}
+
+.sidebar .nav-link.nav-dashboard:hover {
+  background-image: linear-gradient(to right, black,black)
+}
+
+.sidebar .nav-link.nav-dashboard.active {
+  background-image: linear-gradient(to right, black,black)
+}
+
+/* Ensure Dashboard icon is white when active */
+.sidebar .nav-link.nav-dashboard img {
+  filter: brightness(0) invert(1) !important;
+}
+
+.bg-custom-red {
+  background-color: #ed3131;
+  border: none;
+}
+
+.form-check-input:checked {
+  background-color: #ed3131;
+  border: none;
+  opacity: 1;
+}
+
+.approved-btn {
+  color: green !important;
+  background-color: lemonchiffon !important;
+  border: 1px solid green !important;
+  border-radius: 5px;
+}
+
+
+.form-check-input[type=checkbox] {
+  border-radius: .25em;
+  border: 1px solid black;
+}
+
+.statButton {
+
+  font-size: 13px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+/* Specific colors for each status */
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 20px;
+  text-transform: capitalize;
+}
+
+/* Specific colors for each status */
+.status-accounts-approved {
+  background-color: #d4edda;
+  /* Light green background */
+  color: #155724;
+  /* Dark green text */
+}
+
+.status-accounts-approval {
+  background-color: #d4edda;
+  /* Light green background */
+  color: #155724;
+  /* Dark green text */
+}
+
+.status-admin-approved {
+  background-color: #fff3cd;
+  /* Light orange background */
+  color: #856404;
+  /* Dark orange text */
+}
+
+.stats-card {
+  height: 120px;
+}
+
+
+
+.approved-btn.visible {
+  opacity: 1;
+}
+
+
+.btn.disabled,
+.btn:disabled,
+fieldset:disabled .btn {
+  opacity: 1;
+}
+.clip-path{
+clip-path: polygon(43% 65%, 0% 100%, 100% 100%);
+
+background-color: #000;
+}
+
+.lightColor{
+  background-color: #fff;
+}
